@@ -5,6 +5,7 @@ orbs:
 jobs:
   build_and_test: # this can be any name you choose
     docker:
+      # Primary container
       - image: cimg/node:20.9.0
         environment:
           DATABASE_HOST: 0.0.0.0
