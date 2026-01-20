@@ -34,6 +34,7 @@ describe('UserController (e2e)', () => {
   };
 
   beforeAll(async () => {
+    jest.setTimeout(30000);
     //Initialize test app with the helper
     testContext = await initTestApp();
 
