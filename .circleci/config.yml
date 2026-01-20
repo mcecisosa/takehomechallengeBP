@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@5.0.2
-  coveralls: coveralls/coveralls@2.2.5
+  #coveralls: coveralls/coveralls@2.2.5
 
 jobs:
   build_and_test: # this can be any name you choose
@@ -37,10 +37,14 @@ jobs:
           root: ~/project
           paths:
             - .
-      - coveralls/upload:
-          parallel: true
-          flag_name: Test 1
-          verbose: true      
+      #- coveralls/upload:
+      #    parallel: true
+      #    flag_name: Test 1
+      #    verbose: true  
+      #nuevo
+      - run:
+        name: Upload coverage to Coveralls
+        command: npx coveralls --service=circleci < coverage/lcov.info    
 workflows:
   build_test_deploy: # this can be any name you choose
     jobs:
