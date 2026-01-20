@@ -10,15 +10,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-
     environment:
       - DB_HOST=postgres
       - DB_PORT=5432
       - DB_USER=app_test_user
       - DB_PASSWORD=app_test_password
       - DB_NAME=app_test_DB
-      - POKEMON_API_URL=https://pokeapi.co/api/v2
-
+      - POKEMON_API_URL=https://pokeapi.co/api/v2  
 
   postgres:
     image: postgres:16
@@ -28,5 +26,4 @@ services:
     environment:
       POSTGRES_USER: app_test_user
       POSTGRES_PASSWORD: app_test_password 
-      POSTGRES_DB: app_test_DB   
-    restart: always
+      POSTGRES_DB: app_test_DB
