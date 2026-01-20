@@ -10,5 +10,15 @@
     "^src/(.*)$": "<rootDir>/../src/$1"
   },
   "verbose": true,
-  "silent": true
+  "silent": true,
+
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "../src/**/*.ts",
+    "!../src/main.ts",
+    "!../src/**/*.module.ts",
+    "!../src/**/*.dto.ts"
+  ],
+  "coverageDirectory": "../coverage",
+  "coverageReporters": ["lcov", "text"]
 }
