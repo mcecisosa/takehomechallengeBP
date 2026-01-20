@@ -3,6 +3,10 @@
 You have to build a microservice that exposes a REST api with one table, users. User table should be open to creation, deletion, or update. 
 Every request must only accept this `Content-type: application/json`.
 
+### Badges
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/mcecisosa/takehomechallengeBP/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/mcecisosa/takehomechallengeBP/tree/master)
+
 ### Features
 
 - Create new Users with their Pokemon Ids
